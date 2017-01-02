@@ -1,0 +1,6 @@
+framework module DaumSpeech {
+  umbrella header "DaumSpeech.h"
+
+  export *
+  module * { export * }
+}

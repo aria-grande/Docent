@@ -3,26 +3,50 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0EF39E1E1A49560024ECE9 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0EF39D1E1A49560024ECE9 /* libstdc++.6.tbd */; };
+		DE0EF3A01E1A49AA0024ECE9 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0EF39F1E1A49AA0024ECE9 /* libiconv.tbd */; };
+		DE0EF3A81E1A50400024ECE9 /* PieceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EF3A71E1A50400024ECE9 /* PieceTableViewCell.swift */; };
+		DE0EF3AB1E1A50A90024ECE9 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EF3AA1E1A50A90024ECE9 /* Piece.swift */; };
+		DE0EF3AE1E1A51D10024ECE9 /* DaumSpeech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0EF3AD1E1A51D10024ECE9 /* DaumSpeech.framework */; };
 		DEBF0EB71DF6D79800E0984C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF0EB61DF6D79800E0984C /* AppDelegate.swift */; };
 		DEBF0EB91DF6D79800E0984C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF0EB81DF6D79800E0984C /* ViewController.swift */; };
 		DEBF0EBC1DF6D79800E0984C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBF0EBA1DF6D79800E0984C /* Main.storyboard */; };
 		DEBF0EBE1DF6D79800E0984C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBF0EBD1DF6D79800E0984C /* Assets.xcassets */; };
 		DEBF0EC11DF6D79800E0984C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBF0EBF1DF6D79800E0984C /* LaunchScreen.storyboard */; };
 		DEDBCE421DF6E10600799524 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDBCE411DF6E10600799524 /* SearchViewController.swift */; };
-		DEDBCE441DF6E62B00799524 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDBCE431DF6E62B00799524 /* Piece.swift */; };
-		DEDBCE471DF6F02900799524 /* PieceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDBCE461DF6F02900799524 /* PieceTableViewCell.swift */; };
 		DEDBCE491DF6F7C000799524 /* PieceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDBCE481DF6F7C000799524 /* PieceDetailViewController.swift */; };
 		DEE7851A1E01726000B9AC2B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF9F3B51E0164E4006E5C1C /* MediaPlayer.framework */; };
 		DEE7851B1E01726200B9AC2B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF9F3B31E0164DE006E5C1C /* AVFoundation.framework */; };
 		DEE7851C1E01726300B9AC2B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF9F3B11E0164D7006E5C1C /* SystemConfiguration.framework */; };
 		DEE7851D1E01726500B9AC2B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF9F3AF1E0164D1006E5C1C /* AudioToolbox.framework */; };
+		DEF54DB41E076D7500AACC78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF54DB31E076D7500AACC78 /* Foundation.framework */; };
+		DEF54DB61E076D7D00AACC78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF54DB51E076D7D00AACC78 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DE295BEF1E0291C800DB0E48 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DE0EF39D1E1A49560024ECE9 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		DE0EF39F1E1A49AA0024ECE9 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		DE0EF3A71E1A50400024ECE9 /* PieceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceTableViewCell.swift; sourceTree = "<group>"; };
+		DE0EF3AA1E1A50A90024ECE9 /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		DE0EF3AD1E1A51D10024ECE9 /* DaumSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumSpeech.framework; path = Docent/DaumSpeech.framework; sourceTree = "<group>"; };
+		DEAE621C1E1A215C002AF296 /* Docent-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Docent-Bridging-Header.h"; sourceTree = "<group>"; };
 		DEBF0EB31DF6D79800E0984C /* Docent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Docent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBF0EB61DF6D79800E0984C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEBF0EB81DF6D79800E0984C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,14 +55,13 @@
 		DEBF0EC01DF6D79800E0984C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEBF0EC21DF6D79800E0984C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEDBCE411DF6E10600799524 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		DEDBCE431DF6E62B00799524 /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
-		DEDBCE461DF6F02900799524 /* PieceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceTableViewCell.swift; sourceTree = "<group>"; };
 		DEDBCE481DF6F7C000799524 /* PieceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceDetailViewController.swift; sourceTree = "<group>"; };
+		DEF54DB31E076D7500AACC78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DEF54DB51E076D7D00AACC78 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DEF9F3AF1E0164D1006E5C1C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DEF9F3B11E0164D7006E5C1C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DEF9F3B31E0164DE006E5C1C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DEF9F3B51E0164E4006E5C1C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		DEFCD7DE1E01723B00FEE682 /* DaumSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumSpeech.framework; path = "../../../../Downloads/DaumSpeechIphoneOpenApiSample-4.2 2/internal/DaumSpeech-4.2/lib/Release/DaumSpeech.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +69,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0EF3A01E1A49AA0024ECE9 /* libiconv.tbd in Frameworks */,
+				DE0EF3AE1E1A51D10024ECE9 /* DaumSpeech.framework in Frameworks */,
+				DE0EF39E1E1A49560024ECE9 /* libstdc++.6.tbd in Frameworks */,
+				DEF54DB61E076D7D00AACC78 /* UIKit.framework in Frameworks */,
+				DEF54DB41E076D7500AACC78 /* Foundation.framework in Frameworks */,
 				DEE7851C1E01726300B9AC2B /* SystemConfiguration.framework in Frameworks */,
 				DEE7851A1E01726000B9AC2B /* MediaPlayer.framework in Frameworks */,
 				DEE7851D1E01726500B9AC2B /* AudioToolbox.framework in Frameworks */,
@@ -56,6 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE0EF3A61E1A500B0024ECE9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DE0EF3A71E1A50400024ECE9 /* PieceTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		DE0EF3A91E1A50920024ECE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE0EF3AA1E1A50A90024ECE9 /* Piece.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		DEBF0EAA1DF6D79700E0984C = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +120,8 @@
 		DEBF0EB51DF6D79800E0984C /* Docent */ = {
 			isa = PBXGroup;
 			children = (
-				DEDBCE451DF6F01100799524 /* Cell */,
-				DEDBCE401DF6E0DD00799524 /* Model */,
+				DE0EF3A91E1A50920024ECE9 /* Model */,
+				DE0EF3A61E1A500B0024ECE9 /* Cell */,
 				DEDBCE3F1DF6E0D400799524 /* Controller */,
 				DEBF0EB61DF6D79800E0984C /* AppDelegate.swift */,
 				DEBF0EB81DF6D79800E0984C /* ViewController.swift */,
@@ -85,6 +129,7 @@
 				DEBF0EBD1DF6D79800E0984C /* Assets.xcassets */,
 				DEBF0EBF1DF6D79800E0984C /* LaunchScreen.storyboard */,
 				DEBF0EC21DF6D79800E0984C /* Info.plist */,
+				DEAE621C1E1A215C002AF296 /* Docent-Bridging-Header.h */,
 			);
 			path = Docent;
 			sourceTree = "<group>";
@@ -98,26 +143,14 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		DEDBCE401DF6E0DD00799524 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DEDBCE431DF6E62B00799524 /* Piece.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		DEDBCE451DF6F01100799524 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				DEDBCE461DF6F02900799524 /* PieceTableViewCell.swift */,
-			);
-			name = Cell;
-			sourceTree = "<group>";
-		};
 		DEF9F3AE1E0164D1006E5C1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DEFCD7DE1E01723B00FEE682 /* DaumSpeech.framework */,
+				DE0EF39F1E1A49AA0024ECE9 /* libiconv.tbd */,
+				DE0EF39D1E1A49560024ECE9 /* libstdc++.6.tbd */,
+				DE0EF3AD1E1A51D10024ECE9 /* DaumSpeech.framework */,
+				DEF54DB51E076D7D00AACC78 /* UIKit.framework */,
+				DEF54DB31E076D7500AACC78 /* Foundation.framework */,
 				DEF9F3B51E0164E4006E5C1C /* MediaPlayer.framework */,
 				DEF9F3B31E0164DE006E5C1C /* AVFoundation.framework */,
 				DEF9F3B11E0164D7006E5C1C /* SystemConfiguration.framework */,
@@ -136,6 +169,7 @@
 				DEBF0EAF1DF6D79700E0984C /* Sources */,
 				DEBF0EB01DF6D79700E0984C /* Frameworks */,
 				DEBF0EB11DF6D79700E0984C /* Resources */,
+				DE295BEF1E0291C800DB0E48 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,18 +187,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Aree Oh";
 				TargetAttributes = {
 					DEBF0EB21DF6D79700E0984C = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 248TFTQTUE;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = DEBF0EAE1DF6D79700E0984C /* Build configuration list for PBXProject "Docent" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -199,12 +234,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEDBCE441DF6E62B00799524 /* Piece.swift in Sources */,
 				DEDBCE421DF6E10600799524 /* SearchViewController.swift in Sources */,
+				DE0EF3A81E1A50400024ECE9 /* PieceTableViewCell.swift in Sources */,
 				DEDBCE491DF6F7C000799524 /* PieceDetailViewController.swift in Sources */,
+				DE0EF3AB1E1A50A90024ECE9 /* Piece.swift in Sources */,
 				DEBF0EB91DF6D79800E0984C /* ViewController.swift in Sources */,
 				DEBF0EB71DF6D79800E0984C /* AppDelegate.swift in Sources */,
-				DEDBCE471DF6F02900799524 /* PieceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +283,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -270,11 +306,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Docent/Docent-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -297,6 +334,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -313,9 +351,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Docent/Docent-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -324,34 +363,57 @@
 		DEBF0EC61DF6D79800E0984C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 248TFTQTUE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Docent",
 				);
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = Docent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = areeoh.Docent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Docent/Docent-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "i386 armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
 		DEBF0EC71DF6D79800E0984C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 248TFTQTUE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Docent",
 				);
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = Docent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = areeoh.Docent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Docent/Docent-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "i386 armv7 armv7s arm64";
 			};
 			name = Release;
 		};
