@@ -70,8 +70,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE0EF3A01E1A49AA0024ECE9 /* libiconv.tbd in Frameworks */,
-				DE0EF3B01E1A532C0024ECE9 /* DaumSpeech.framework in Frameworks */,
 				DE0EF39E1E1A49560024ECE9 /* libstdc++.6.tbd in Frameworks */,
+				DE0EF3B01E1A532C0024ECE9 /* DaumSpeech.framework in Frameworks */,
 				DEF54DB61E076D7D00AACC78 /* UIKit.framework in Frameworks */,
 				DEF54DB41E076D7500AACC78 /* Foundation.framework in Frameworks */,
 				DEE7851C1E01726300B9AC2B /* SystemConfiguration.framework in Frameworks */,
