@@ -11,7 +11,7 @@
 		DE0EF3A01E1A49AA0024ECE9 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0EF39F1E1A49AA0024ECE9 /* libiconv.tbd */; };
 		DE0EF3A81E1A50400024ECE9 /* PieceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EF3A71E1A50400024ECE9 /* PieceTableViewCell.swift */; };
 		DE0EF3AB1E1A50A90024ECE9 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EF3AA1E1A50A90024ECE9 /* Piece.swift */; };
-		DE0EF3AE1E1A51D10024ECE9 /* DaumSpeech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0EF3AD1E1A51D10024ECE9 /* DaumSpeech.framework */; };
+		DE0EF3B01E1A532C0024ECE9 /* DaumSpeech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0EF3AF1E1A532C0024ECE9 /* DaumSpeech.framework */; };
 		DEBF0EB71DF6D79800E0984C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF0EB61DF6D79800E0984C /* AppDelegate.swift */; };
 		DEBF0EB91DF6D79800E0984C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF0EB81DF6D79800E0984C /* ViewController.swift */; };
 		DEBF0EBC1DF6D79800E0984C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBF0EBA1DF6D79800E0984C /* Main.storyboard */; };
@@ -45,7 +45,7 @@
 		DE0EF39F1E1A49AA0024ECE9 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		DE0EF3A71E1A50400024ECE9 /* PieceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceTableViewCell.swift; sourceTree = "<group>"; };
 		DE0EF3AA1E1A50A90024ECE9 /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
-		DE0EF3AD1E1A51D10024ECE9 /* DaumSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumSpeech.framework; path = Docent/DaumSpeech.framework; sourceTree = "<group>"; };
+		DE0EF3AF1E1A532C0024ECE9 /* DaumSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumSpeech.framework; sourceTree = "<group>"; };
 		DEAE621C1E1A215C002AF296 /* Docent-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Docent-Bridging-Header.h"; sourceTree = "<group>"; };
 		DEBF0EB31DF6D79800E0984C /* Docent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Docent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBF0EB61DF6D79800E0984C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE0EF3A01E1A49AA0024ECE9 /* libiconv.tbd in Frameworks */,
-				DE0EF3AE1E1A51D10024ECE9 /* DaumSpeech.framework in Frameworks */,
+				DE0EF3B01E1A532C0024ECE9 /* DaumSpeech.framework in Frameworks */,
 				DE0EF39E1E1A49560024ECE9 /* libstdc++.6.tbd in Frameworks */,
 				DEF54DB61E076D7D00AACC78 /* UIKit.framework in Frameworks */,
 				DEF54DB41E076D7500AACC78 /* Foundation.framework in Frameworks */,
@@ -89,7 +89,7 @@
 			children = (
 				DE0EF3A71E1A50400024ECE9 /* PieceTableViewCell.swift */,
 			);
-			name = Cell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DE0EF3A91E1A50920024ECE9 /* Model */ = {
@@ -97,15 +97,15 @@
 			children = (
 				DE0EF3AA1E1A50A90024ECE9 /* Piece.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DEBF0EAA1DF6D79700E0984C = {
 			isa = PBXGroup;
 			children = (
 				DEBF0EB51DF6D79800E0984C /* Docent */,
-				DEBF0EB41DF6D79800E0984C /* Products */,
 				DEF9F3AE1E0164D1006E5C1C /* Frameworks */,
+				DEBF0EB41DF6D79800E0984C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,16 +120,16 @@
 		DEBF0EB51DF6D79800E0984C /* Docent */ = {
 			isa = PBXGroup;
 			children = (
-				DE0EF3A91E1A50920024ECE9 /* Model */,
 				DE0EF3A61E1A500B0024ECE9 /* Cell */,
 				DEDBCE3F1DF6E0D400799524 /* Controller */,
+				DE0EF3A91E1A50920024ECE9 /* Model */,
 				DEBF0EB61DF6D79800E0984C /* AppDelegate.swift */,
-				DEBF0EB81DF6D79800E0984C /* ViewController.swift */,
-				DEBF0EBA1DF6D79800E0984C /* Main.storyboard */,
 				DEBF0EBD1DF6D79800E0984C /* Assets.xcassets */,
-				DEBF0EBF1DF6D79800E0984C /* LaunchScreen.storyboard */,
-				DEBF0EC21DF6D79800E0984C /* Info.plist */,
 				DEAE621C1E1A215C002AF296 /* Docent-Bridging-Header.h */,
+				DEBF0EC21DF6D79800E0984C /* Info.plist */,
+				DEBF0EBF1DF6D79800E0984C /* LaunchScreen.storyboard */,
+				DEBF0EBA1DF6D79800E0984C /* Main.storyboard */,
+				DEBF0EB81DF6D79800E0984C /* ViewController.swift */,
 			);
 			path = Docent;
 			sourceTree = "<group>";
@@ -137,10 +137,10 @@
 		DEDBCE3F1DF6E0D400799524 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DEDBCE411DF6E10600799524 /* SearchViewController.swift */,
 				DEDBCE481DF6F7C000799524 /* PieceDetailViewController.swift */,
+				DEDBCE411DF6E10600799524 /* SearchViewController.swift */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		DEF9F3AE1E0164D1006E5C1C /* Frameworks */ = {
@@ -148,7 +148,7 @@
 			children = (
 				DE0EF39F1E1A49AA0024ECE9 /* libiconv.tbd */,
 				DE0EF39D1E1A49560024ECE9 /* libstdc++.6.tbd */,
-				DE0EF3AD1E1A51D10024ECE9 /* DaumSpeech.framework */,
+				DE0EF3AF1E1A532C0024ECE9 /* DaumSpeech.framework */,
 				DEF54DB51E076D7D00AACC78 /* UIKit.framework */,
 				DEF54DB31E076D7500AACC78 /* Foundation.framework */,
 				DEF9F3B51E0164E4006E5C1C /* MediaPlayer.framework */,
@@ -252,6 +252,7 @@
 				DEBF0EBB1DF6D79800E0984C /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		DEBF0EBF1DF6D79800E0984C /* LaunchScreen.storyboard */ = {
@@ -260,6 +261,7 @@
 				DEBF0EC01DF6D79800E0984C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
