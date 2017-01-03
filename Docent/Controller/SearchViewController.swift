@@ -44,12 +44,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         isPlaying = !isPlaying
     }
     
-    /**
-     * 에러 상황 시 호출된다.
-     *
-     * @param errorCode MTTextToSpeechError errorCode
-     * @param message 에러 메시지.
-     **/
     public func onError(_ errorCode: MTTextToSpeechError, message: String!) {
         NSLog("MTTextToSpeechError: (\(errorCode)) \(message)")
     }
@@ -91,6 +85,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         
         self.filteredResult = []
         search(query: query)
+        dismissKeyboard()
     }
     
     private func search(query: String) {
