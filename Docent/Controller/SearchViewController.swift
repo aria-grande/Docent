@@ -37,7 +37,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hideKeyboardWhenTappedAround()
         textToSpeechClient = MTTextToSpeechClient(config: speechConfig)
         textToSpeechClient?.delegate = self
         tableView.delegate = self
@@ -95,6 +94,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        dismissKeyboard()
         if segue.identifier == "showPieceDetail" {
             let detailVC = segue.destination as! PieceDetailViewController
             detailVC.setPiece(piece: filteredResult[(self.tableView.indexPathForSelectedRow?.row)!])
