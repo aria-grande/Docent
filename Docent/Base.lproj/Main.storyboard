@@ -83,17 +83,40 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhU-OP-rwC" userLabel="LoadingView">
+                                <rect key="frame" x="0.0" y="107" width="375" height="560"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YCv-qo-ydp">
+                                        <rect key="frame" x="169" y="263" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstItem="YCv-qo-ydp" firstAttribute="centerX" secondItem="GhU-OP-rwC" secondAttribute="centerX" id="Asf-cz-MVu"/>
+                                    <constraint firstItem="YCv-qo-ydp" firstAttribute="centerY" secondItem="GhU-OP-rwC" secondAttribute="centerY" constant="1.5" id="wKt-Tk-YLy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aBk-fq-G1q" firstAttribute="width" secondItem="twM-0a-ebm" secondAttribute="width" id="5m4-n0-mI6"/>
                             <constraint firstItem="aBk-fq-G1q" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ANw-xW-yqK"/>
+                            <constraint firstItem="GhU-OP-rwC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="Sih-UG-Fkl"/>
+                            <constraint firstItem="GhU-OP-rwC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="VDE-qj-K4G"/>
                             <constraint firstItem="aBk-fq-G1q" firstAttribute="height" secondItem="twM-0a-ebm" secondAttribute="height" id="es1-e1-jAE"/>
+                            <constraint firstItem="GhU-OP-rwC" firstAttribute="width" secondItem="aBk-fq-G1q" secondAttribute="width" id="lBM-jz-wb6"/>
+                            <constraint firstItem="GhU-OP-rwC" firstAttribute="leading" secondItem="aBk-fq-G1q" secondAttribute="leading" id="ntf-Zb-VrU"/>
                             <constraint firstItem="aBk-fq-G1q" firstAttribute="leading" secondItem="twM-0a-ebm" secondAttribute="leading" id="smU-iF-ezC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="검색" id="z9r-8l-D63"/>
                     <connections>
+                        <outlet property="loadingIndicator" destination="YCv-qo-ydp" id="oDr-ii-QE0"/>
+                        <outlet property="loadingView" destination="GhU-OP-rwC" id="ind-b7-hkW"/>
                         <outlet property="tableView" destination="aBk-fq-G1q" id="5TU-IS-ALs"/>
                     </connections>
                 </viewController>

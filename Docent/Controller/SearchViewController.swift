@@ -12,9 +12,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet var loadingView: UIView!
+    
+    @IBOutlet var loadingIndicator: UIActivityIndicatorView!
+    
+    
     // -- MARK: Variables of configuration
     private let playIconName = "player_icon"
     private let pauseIconName = "pause_icon"
+    private let searchAPI_URL = "http://104.199.198.37:8080/search/"
     private let speechConfig = [
         TextToSpeechConfigKeyApiKey: "bd5b4961a4a1cdcdcf85db418a23d248",
         TextToSpeechConfigKeyVoiceType: TextToSpeechVoiceTypeWoman
@@ -26,6 +32,23 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
     private var buttonOfPlaying:UIButton?
     private var textToSpeechClient:MTTextToSpeechClient?
     private var filteredResult = [Piece]()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        hideKeyboardWhenTappedAround()
+        textToSpeechClient = MTTextToSpeechClient(config: speechConfig)
+        textToSpeechClient?.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        loadingIndicator.hidesWhenStopped = true
+        loadingView.isHidden = true
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
     
     // -- MARK: Speech
@@ -56,17 +79,18 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         buttonOfPlaying = UIButton()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        textToSpeechClient = MTTextToSpeechClient(config: speechConfig)
-        textToSpeechClient?.delegate = self
-        tableView.delegate = self
-        tableView.dataSource = self
+    func startLoading() {
+        tableView.isScrollEnabled = false
+        loadingView.isHidden = false
+        loadingIndicator.startAnimating()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    func stopLoading() {
+        tableView.isScrollEnabled = true
+        loadingIndicator.stopAnimating()
+        loadingView.isHidden = true
     }
+    
     
 
     // MARK: - Navigation
@@ -83,34 +107,45 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UISearchContr
         let query = searchBar.text!
         NSLog("Query: \(query)")
         
-        self.filteredResult = []
+        filteredResult.removeAll()
         search(query: query)
         dismissKeyboard()
     }
     
     private func search(query: String) {
-        let url = URL(string: "http://104.199.198.37:8080/search/\(query.encodeUrl())")!
+        let url = URL(string: "\(searchAPI_URL)\(query.encodeUrl())")!
         NSLog("URL: \(url)")
 
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard error == nil else {
-                NSLog("Error: \(error)")
-                return
-            }
+            guard error == nil else { NSLog("Error: \(error)"); return }
+
+            self.deserialize(data: data!)
             
-            let list = (try? JSONSerialization.jsonObject(with: data!, options: [])) as! [[String: Any]]
-            for i in 0..<list.count {
-                let pdata = list[i]
-                let contents = pdata["contents"] as! NSArray
-                let desc = (contents[0] as! Dictionary<String, String>)["description"]
-                
-                self.filteredResult.append(Piece(title: pdata["title"]! as! String, author: "author(test)", description: desc!, reference: self.generateWikiURL(path: pdata["url"] as! String)))
+            // URLSession works in background thread.
+            // Never touch the interface except on main thread.
+            DispatchQueue.main.async {
+                self.stopLoading()
+                self.tableView.reloadData()
             }
-            self.tableView.reloadData()
-            // TODO: remove loading icon
         }
         task.resume()
-        // TODO: draw loading icon
+        startLoading()
+    }
+    
+    private func deserialize(data:Data) {
+        guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else {
+            NSLog("Error: failed to deserialized (\(data))")
+            return
+        }
+        
+        let list = json as? [[String: Any]] ?? []
+        for i in 0..<list.count {
+            let pdata = list[i]
+            let contents = pdata["contents"] as? NSArray
+            let desc = (contents?[0] as! Dictionary<String, String>)["description"]!
+            
+            filteredResult.append(Piece(title: pdata["title"]! as! String, author: "author(test)", description: desc, reference: self.generateWikiURL(path: pdata["url"] as! String)))
+        }
     }
     
     private func generateWikiURL(path: String) -> String {
